@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*  width < 768px: smartphone
+/   992px < width > 768px: tablette
+/   width > 992px: desktop
+*/
+/**
+ * mise en place de boc-sizing
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * conserve la propriété héritée box-sizing
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * largeur maximale et centrage du body
+ */
+body {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * style des liens
+ */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/**
+ * typographie de base
+ */
+body {
+  color: #000;
+}
+
+/**
+ * largeur
+ * padding
+ */
+.container {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

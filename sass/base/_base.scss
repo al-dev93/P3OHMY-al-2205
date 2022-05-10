@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// fichier des styles basiques
+// -----------------------------------------------------------------------------
+
+/**
+ * mise en place de boc-sizing
+ */
+html {
+  box-sizing: border-box;
+}
+/**
+ * conserve la propriété héritée box-sizing
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/**
+ * largeur maximale et centrage du body
+ */
+body{
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+/**
+ * style des liens
+ */
+a {
+  color: $maintext-color;
+  text-decoration: none;
+}

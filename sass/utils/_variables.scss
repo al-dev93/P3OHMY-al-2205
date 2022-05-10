@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// fichier regroupant l'ensemble des variables
+// -----------------------------------------------------------------------------
+
+//* définition des polices de caratères
+// Police du texte
+$standard-font: 'Roboto', sans-serif;
+// Police des titres
+$title-font: 'Shrikhand', cursive;
+
+//* définition des couleurs
+// couleur primaire mauve
+$primary-color: #9356DC;
+// couleur secondaire rose
+$secondary-color: #FF79DA;
+// couleur tertiaire menthe
+$tertiary-color: #99E2D0;
+// couleur principale du texte
+$maintext-color: #000;
+
+//* largeur maximale de conteneur
+$max-width: 1366px;
+
+//* défintion des breakpoints dans une map
+/*  width < 768px: smartphone
+/   992px < width > 768px: tablette
+/   width > 992px: desktop
+*/
+$breakpoints: (
+  'tablet': 768px,
+  'desktop': 992px
+);

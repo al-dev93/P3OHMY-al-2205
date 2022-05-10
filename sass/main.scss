@@ -1,0 +1,20 @@
+//  1. import des utilitaires 
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+
+  //  2. import des styles de base
+@import './base/base';
+@import './base/fonts';
+@import './base/typography';
+
+//  3. import des layouts
+@import './layout/container';
+@import './layout/header';
+@import './layout/footer';
+
+//  4. import des composants
+@import './components/button';
+
+//  5. import des styles de pages
+@import './pages/home';
