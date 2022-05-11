@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// style du haut de page.
+// -----------------------------------------------------------------------------
+
+/**
+ * largeur
+ * padding
+ */
+.page-header{
+    display: flex;
+    flex-direction: column;
+    background-color: $soft-grey-color;
+    padding-bottom: 3.5rem;
+
+    & form{
+        margin-bottom: 1.5rem;;
+    }
+    & h1{
+        width: 80%;
+        padding-left: 3.6rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    &__slogan{
+        width: 95%;
+        padding-left: 1.8rem;
+        margin: 0.8rem 0 1.8rem;
+        text-align: center;
+    }
+    &__btn{
+        width: 58%;
+        margin-left: 0.3rem;
+        align-self: center;
+    }
+}

@@ -5,16 +5,18 @@
 
   //  2. import des styles de base
 @import './base/base';
-@import './base/fonts';
 @import './base/typography';
 
 //  3. import des layouts
-@import './layout/container';
 @import './layout/header';
+@import './layout/container';
+@import './layout/page-header';
 @import './layout/footer';
+
 
 //  4. import des composants
 @import './components/button';
+@import './components/form';
 
 //  5. import des styles de pages
 @import './pages/home';

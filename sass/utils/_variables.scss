@@ -4,7 +4,7 @@
 
 //* définition des polices de caratères
 // Police du texte
-$standard-font: 'Roboto', sans-serif;
+$regular-font: 'Roboto', sans-serif;
 // Police des titres
 $title-font: 'Shrikhand', cursive;
 
@@ -15,8 +15,31 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 // couleur tertiaire menthe
 $tertiary-color: #99E2D0;
+// couleurs de fond des conteneurs
+$grey-color: #EAEAEA;
+$soft-grey-color: #F6F6F6;
 // couleur principale du texte
-$maintext-color: #000;
+$black-color: #000;
+// couleur de texte sur fond coloré
+$white-color: #fff;
+// état initial de l'ombre des boutons
+$shw-btn-thicken: 5px;
+$shw-btn-blur: 8px;
+$shw-btn-spread: 0px;
+$shw-btn-color: #C9C9C9;
+$btn-opacity: 1;
+$event-btn: (
+  mute:(
+    shadow: (0 $shw-btn-thicken $shw-btn-blur $shw-btn-spread $shw-btn-color),
+    opacity: $btn-opacity
+  ),
+  hover:(
+    spread: 1px,
+    darken: 18%,
+    opacity: 0.14
+  )
+);
+
 
 //* largeur maximale de conteneur
 $max-width: 1366px;

@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// styles des boutons.
+// -----------------------------------------------------------------------------
+
+/**
+ * largeur
+ * padding
+ */
+form{
+    width: 100%;
+    padding: 0.84rem 0 0.84rem 6.5rem;
+    display: flex;
+    background-color: $grey-color;
+    & label{
+        margin-right: 0.9rem;
+    }
+    & input{
+        border: 0;
+        background-color: transparent;
+        font-weight: 600;
+    }
+}

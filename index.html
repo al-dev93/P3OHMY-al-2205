@@ -8,13 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/style.css">
     <title>ohmyfood</title>
 </head>
 <body>
-    
+    <header class="header">
+        <img class="header__logo" src="./image/logo/ohmyfood.png" alt="logo de ohmyfood">
+    </header>
+    <main class="container">
+        <div class="page-header">
+            <form method="post" action="processing.php">
+                <label class="fas fa-map-marker-alt" for="location"></label>
+                <input type="search" id="location" name="location" value="Paris, Belleville"/>
+            </form>
+            <h1>
+                Réservez le menu qui vous convient
+            </h1>
+            <p class="page-header__slogan">
+                Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </p>
+            <button class="page-header__btn" name="location" type="submit">Explorer nos restaurants</button>
+        </div>
+    </main>
 </body>
 </html>

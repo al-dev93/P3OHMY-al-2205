@@ -6,5 +6,20 @@
  * typographie de base
  */
 body {
-  color: $maintext-color;
+  font-family: $regular-font;
+  color: $black-color;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1{
+  font-family: $regular-font;
+  font-size: 1.48rem;
+  font-weight: 600;
+}
+
+p{
+  font-family: $regular-font;
+  font-size: 1.14rem;
+  font-weight: 400;
 }

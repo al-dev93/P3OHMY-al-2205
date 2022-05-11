@@ -2,3 +2,40 @@
 // fichier contenant les mixins.
 // -----------------------------------------------------------------------------
 
+/**
+ * largeur
+ * padding
+ */
+@mixin event-btn($buttons) {
+    @each $event, $button in $buttons {
+        @if ($event == mute) {
+            box-shadow: map-get($button, shadow);
+            opacity: map-get($button, opacity);
+        }
+        @else{
+            &:#{$event} {
+                box-shadow:
+                    nth($init-shadow, 1)
+                    nth($init-shadow, 2) 
+                    nth($init-shadow, 3) 
+                    nth($init-shadow, 4) + map-get($button, spread) 
+                    darken(nth($init-shadow, 5), map-get($button, darken));
+                opacity: $init-opacity - map-get($button, opacity);
+            }
+        }
+        $init-shadow: map-get($button, shadow);
+        $init-opacity: map-get($button, opacity);
+    }
+}
+
+// $event-btn: (
+//   mute:(
+//     shadow: $shw-btn-thicken, $shw-btn-blur, $shw-btn-spread, $shw-btn-color,
+//     opacity: $btn-opacity
+//   ),
+//   hover:(
+//     spread: 1px,
+//     darken: 10%,
+//     opacity: 10%
+//   )
+// );
