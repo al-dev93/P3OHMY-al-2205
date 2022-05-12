@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// Définition du container main
+// Définition du conteneur main
 // -----------------------------------------------------------------------------
 
 /**
@@ -8,4 +8,16 @@
  */
 .container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 7%;
+  }
+  @include desktop {
+    width: 100%;
+    flex-direction: column;
+
+  }
 }

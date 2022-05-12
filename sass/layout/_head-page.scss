@@ -6,11 +6,19 @@
  * largeur
  * padding
  */
-.page-header{
+.head-page{
+    width: 100%;
+    @include tablet {
+        width: 46%;
+    }
+    @include desktop {
+        width: 28%;
+    }
     display: flex;
     flex-direction: column;
     background-color: $soft-grey-color;
     padding-bottom: 3.5rem;
+    margin-bottom: 2rem;
 
     & form{
         margin-bottom: 1.5rem;;

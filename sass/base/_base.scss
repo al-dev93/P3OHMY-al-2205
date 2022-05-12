@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// fichier des styles basiques
+// fichier des styles de base
 // -----------------------------------------------------------------------------
 
 /**
@@ -27,7 +27,21 @@ body{
 /**
  * style des liens
  */
+ ul {
+   padding: 0;
+ }
+/**
+ * style des liens
+ */
+li {
+  list-style: none;
+  margin: 0;
+}
+/**
+ * style des liens
+ */
 a {
   color: $black-color;
+  font-weight: 900;
   text-decoration: none;
 }

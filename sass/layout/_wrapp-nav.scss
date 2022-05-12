@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// style du conteneur de navigation
+// -----------------------------------------------------------------------------
+
+/**
+ * largeur
+ * padding
+ */
+.nav {
+    counter-reset: list_item;
+    width: 100%;
+    @include tablet {
+        width: 40%;
+        align-self: center;
+    }
+    @include desktop {
+        width: 28%;
+        align-self: initial;
+    }
+    padding-left: 1.25rem;
+    h2 {
+        margin-bottom: 1.8rem;
+        @include tablet {
+            margin: 0 1rem;
+        }
+    }
+    & li {
+        counter-increment: list_item;
+        margin-bottom: 1.47rem;
+        height: 74px;
+        vertical-align: middle;
+        position: relative;
+        &::before {
+            z-index: 1;
+            width: 24px;
+            line-height: 24px;
+            display: inline-block;
+            position: absolute;
+            top: 26px;
+            text-align: center;
+            font-weight: 500;
+            color: $white-color;
+            border-radius: 50%;
+            background-color: $primary-color;
+            content: counter(list_item);
+        }
+    }
+    &__item{
+        height: 100%;
+        width: 92%;
+        position: absolute;
+        left: 12px;
+        padding-left: 1.9rem;
+        display: flex;
+        align-items: center;
+        background-color: $soft-grey-color;
+        border-radius: 30px;
+        @include event-btn($event-btn, $bgnav-item-color);
+        &:hover:nth-child(1){
+            color: $primary-color;
+        }
+        & i {
+            width: 20px;
+            text-align: center;
+            margin-right: 1.4rem;
+            font-size: 18px;
+        }
+    }
+}
