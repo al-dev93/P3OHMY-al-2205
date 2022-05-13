@@ -343,19 +343,34 @@ form input {
   font-size: 14px;
   font-weight: 700;
 }
-.card i {
+.card__bgheart {
   position: absolute;
-  bottom: 32px;
   right: 23px;
+  bottom: 32px;
+  width: 25px;
+  height: 25px;
+}
+.card__bgheart i {
   font-size: 25px;
+  position: relative;
+  z-index: 1;
 }
-.card__like {
-  opacity: 0;
-}
-.card__like:hover {
-  background-clip: text;
-  color: #9356DC;
+.card__bgheart i:hover::after {
   opacity: 1;
+}
+.card__bgheart i::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  color: #9356DC;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-clip: text;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1000ms ease-in-out;
 }
 .card__wrap {
   display: flex;
