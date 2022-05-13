@@ -9,6 +9,7 @@
 .nav {
     counter-reset: list_item;
     width: 100%;
+    margin-bottom: 4.7rem;
     @include tablet {
         width: 40%;
         align-self: center;
@@ -19,7 +20,7 @@
     }
     padding-left: 1.25rem;
     h2 {
-        margin-bottom: 1.8rem;
+        margin: 1.15rem 0 1.9rem;
         @include tablet {
             margin: 0 1rem;
         }

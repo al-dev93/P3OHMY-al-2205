@@ -11,13 +11,15 @@
 @import './layout/header';
 @import './layout/container';
 @import './layout/head-page';
-@import './layout/wrapp-nav';
+@import './layout/wrap-nav';
+@import './layout/resto';
 @import './layout/footer';
 
 
 //  4. import des composants
 @import './components/button';
 @import './components/form';
+@import './components/card';
 
 //  5. import des styles de pages
 @import './pages/home';

@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// style du conteneur des cartes restaurants
+// -----------------------------------------------------------------------------
+
+/**
+ * largeur
+ * padding
+ */
+.resto{
+    padding: 0 1.26rem;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    & .card{
+        // width: 90%;
+    }
+}
