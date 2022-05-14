@@ -10,6 +10,7 @@
     counter-reset: list_item;
     width: 100%;
     margin-bottom: 4.7rem;
+    padding-left: 1.25rem;
     @include tablet {
         width: 40%;
         align-self: center;
@@ -18,7 +19,6 @@
         width: 28%;
         align-self: initial;
     }
-    padding-left: 1.25rem;
     h2 {
         margin: 1.15rem 0 1.9rem;
         @include tablet {
@@ -54,9 +54,8 @@
         padding-left: 1.9rem;
         display: flex;
         align-items: center;
-        background-color: $soft-grey-color;
         border-radius: 30px;
-        @include event-btn($event-btn, $bgnav-item-color);
+        @include smart-btn($soft-grey-color);
         &:hover:nth-child(1){
             color: $primary-color;
         }

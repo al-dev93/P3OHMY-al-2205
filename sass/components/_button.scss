@@ -10,8 +10,7 @@ button{
     line-height: 3rem;
     border: none;
     border-radius: 3rem;
-    background: linear-gradient(to left top, $primary-color, $secondary-color);
     color: $white-color;
     font-weight: 600;
-    @include event-btn($event-btn);
+    @include smart-btn($color1: $primary-color, $color2: $secondary-color, $lgn: $bgbtn-lighten);
 }

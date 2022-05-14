@@ -11,7 +11,6 @@ $title-font: 'Shrikhand', cursive;
 //* définition des couleurs
 // couleur primaire mauve
 $primary-color: #9356DC;
-$bgnav-item-color: #F5EDFF;
 // couleur secondaire rose
 $secondary-color: #FF79DA;
 // couleur tertiaire menthe
@@ -23,23 +22,30 @@ $soft-grey-color: #F6F6F6;
 $black-color: #000;
 // couleur de texte sur fond coloré
 $white-color: #fff;
-// état initial de l'ombre des boutons
-$shw-btn-thicken: 5px;
-$shw-btn-blur: 8px;
-$shw-btn-spread: 0px;
-$shw-btn-color: #C9C9C9;
-$btn-opacity: 1;
-$event-btn: (
+
+//* Définition de l'ombre des boutons
+// propriétés de l'ombre avant animation
+$shw-btn-thicken: 5px;    // épaisseur sur l'axe y
+$shw-btn-blur: 8px;       // floutage
+$shw-btn-spread: 0px;     // étalement
+$shw-btn-color: #C9C9C9;  // couleur
+// paramètre d'animation de l'ombre
+$shw-thickness: 3px;   // augmentation de l'épaisseur
+$shw-spread: 1px;      // renforcer l'étalement
+$shw-darken: 18%;  // assombrir l'ombre 
+// map contenant l'ombre initiale et l'ombre animée
+$shadow-btn:(
   mute:(
-    shadow: (0 $shw-btn-thicken $shw-btn-blur $shw-btn-spread $shw-btn-color),
-    opacity: $btn-opacity
+    shadow: 0 $shw-btn-thicken $shw-btn-blur $shw-btn-spread $shw-btn-color
   ),
   hover:(
-    spread: 1px,
-    darken: 18%,
-    opacity: 0.14
+    shadow: 0 $shw-btn-thicken+$shw-thickness $shw-btn-blur $shw-btn-spread+$shw-spread darken($shw-btn-color, $shw-darken)
   )
 );
+
+//* Définition du background des boutons
+$bgbtn-nav-color: #F5EDFF; // background des boutons du menu
+$bgbtn-lighten: 5%;  // éclaircicement du background
 
 
 //* largeur maximale de conteneur
