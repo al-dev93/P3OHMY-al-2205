@@ -107,10 +107,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 8px;
+  padding: 21px 0 13px;
   width: 100%;
-  height: 66px;
-  border-bottom: 2px solid darkgrey;
+  min-height: 4.125rem;
+  border-bottom: 2px solid #D6D6D6;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -140,17 +140,29 @@ p {
   display: flex;
   flex-direction: column;
 }
+.container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 768px) {
-  .container {
+  .container > div {
     flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 7%;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container > div {
+    width: 35%;
+    max-width: 400px;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 992px) {
   .container {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -169,32 +181,34 @@ p {
 @media screen and (min-width: 768px) {
   .head-page {
     width: 46%;
+    padding-bottom: 5rem;
   }
 }
 @media screen and (min-width: 992px) {
   .head-page {
-    width: 28%;
+    width: 100%;
+    margin-bottom: 5rem;
   }
 }
 .head-page form {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 .head-page h1 {
-  width: 80%;
-  padding-left: 3.6rem;
+  width: 65%;
+  margin-left: 15%;
   margin-bottom: 0;
   text-align: center;
 }
 .head-page__slogan {
-  width: 95%;
-  padding-left: 1.8rem;
-  margin: 0.8rem 0 1.8rem;
+  width: 88%;
+  margin: 0.85rem 0 1.85rem 7.5%;
   font-size: 1.14rem;
   text-align: center;
 }
 .head-page__btn {
   width: 58%;
-  margin-left: 0.3rem;
+  max-width: 230px;
+  margin-left: 0.45rem;
   align-self: center;
 }
 
@@ -206,17 +220,19 @@ p {
   counter-reset: list_item;
   width: 100%;
   margin-bottom: 4.7rem;
-  padding-left: 1.25rem;
+  padding-left: 5.5%;
 }
 @media screen and (min-width: 768px) {
   .nav {
     width: 40%;
+    margin: 0 8% 0 0;
     align-self: center;
   }
 }
 @media screen and (min-width: 992px) {
   .nav {
-    width: 28%;
+    width: 100%;
+    margin-right: 0;
     align-self: initial;
   }
 }
@@ -263,6 +279,7 @@ p {
 }
 .nav__item:hover {
   box-shadow: 0 8px 8px 1px #9b9b9b;
+  background-color: #F5EDFF;
 }
 .nav__item:hover:nth-child(1) {
   color: #9356DC;
@@ -279,12 +296,36 @@ p {
  * padding
  */
 .resto {
-  padding: 0 1.26rem;
+  width: 100%;
+  padding: 0 5.3%;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .resto {
+    padding: 0 8%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 992px) {
+  .resto {
+    flex: 1;
+  }
+}
+.resto__title {
+  width: 100%;
+  margin-bottom: 1.4rem;
+}
 .resto .card {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .resto .card {
+    width: 45%;
+    margin-bottom: 3rem;
+  }
 }
 
 /**
@@ -302,7 +343,7 @@ button {
 }
 button:hover {
   box-shadow: 0 8px 8px 1px #9b9b9b;
-  background: linear-gradient(to left top, #a16be0, #ff93e1);
+  background-color: linear-gradient(to left top, #a16be0, #ff93e1);
 }
 
 /**
@@ -331,23 +372,27 @@ form input {
 .card {
   width: 100%;
   position: relative;
-  border-radius: 20px;
+  border-radius: 18px;
   background-color: #fff;
   box-shadow: 5px 5px 7px #C9C9C9;
 }
-.card span {
-  padding: 8px 10px;
+.card__new {
+  padding: 7px 11px;
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 12px;
+  right: 12px;
   background-color: #99E2D0;
   font-size: 14px;
   font-weight: 700;
+  color: #008766;
+}
+.card__new--disable {
+  display: none;
 }
 .card__bgheart {
   position: absolute;
   right: 23px;
-  bottom: 32px;
+  bottom: 30px;
   width: 25px;
   height: 25px;
 }
@@ -387,19 +432,19 @@ form input {
 }
 .card__wrap__img img {
   width: 100%;
-  height: 178px;
+  height: 174px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 18px 18px 0 0;
 }
 .card__wrap__info {
   min-height: 75px;
   flex: auto;
-  padding: 4.6% 3.8% 0%;
+  padding: 5% 3.8% 0%;
   display: flex;
   flex-direction: column;
 }
 .card__wrap__info h3 {
-  margin-bottom: 1.7%;
+  margin-bottom: 1%;
 }
 
 /*# sourceMappingURL=style.css.map */

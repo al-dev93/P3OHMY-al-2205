@@ -19,46 +19,48 @@
         <img class="header__logo" src="./image/logo/ohmyfood.png" alt="logo de ohmyfood">
     </header>
     <main class="container">
-        <section class="head-page">
-            <form method="post" action="processing.php">
-                <label class="fas fa-map-marker-alt" for="location"></label>
-                <input type="search" id="location" name="location" value="Paris, Belleville"/>
-            </form>
-            <h1>
-                Réservez le menu qui vous convient
-            </h1>
-            <p class="head-page__slogan">
-                Découvrez des restaurants d'exception, sélectionnés par nos soins.
-            </p>
-            <button class="head-page__btn" name="location" type="submit">Explorer nos restaurants</button>
-        </section>
-        <div class="nav">
-            <h2>Fonctionnement</h2>
-            <nav>
-                <ul>
-                    <li>
-                        <div class="nav__item">
-                            <i class="fas fa-mobile-android-alt"></i><a href="#">Choisissez un restaurant</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="nav__item">
-                            <i class="fas fa-list-dots"></i><a href="#">Composez votre menu</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="nav__item">
-                            <i class="fas fa-store"></i><a href="#">Dégustez au restaurant</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+        <div>
+            <section class="head-page">
+                <form method="post" action="processing.php">
+                    <label class="fas fa-map-marker-alt" for="location"></label>
+                    <input type="search" id="location" name="location" value="Paris, Belleville"/>
+                </form>
+                <h1>
+                    Réservez le menu qui vous convient
+                </h1>
+                <p class="head-page__slogan">
+                    Découvrez des restaurants d'exception, sélectionnés par nos soins.
+                </p>
+                <button class="head-page__btn" name="location" type="submit">Explorer nos restaurants</button>
+            </section>
+            <div class="nav">
+                <h2>Fonctionnement</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="nav__item">
+                                <i class="fas fa-mobile-android-alt"></i><a href="#">Choisissez un restaurant</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav__item">
+                                <i class="fas fa-list-dots"></i><a href="#">Composez votre menu</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nav__item">
+                                <i class="fas fa-store"></i><a href="#">Dégustez au restaurant</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <section class="resto">
-            <h2>Restaurants</h2>
+            <h2 class="resto__title">Restaurants</h2>
             <!-- Restaurant la palette du goût -->
             <div class="card">
-                <span>Nouveau</span>
+                <span class="card__new">Nouveau</span>
                 <div class="card__bgheart">
                     <i class="far fa-heart"></i>
                 </div>
@@ -76,7 +78,7 @@
             </div>
             <!-- Restaurant la note enchantée -->
             <div class="card">
-                <span>Nouveau</span>
+                <span class="card__new">Nouveau</span>
                 <div class="card__bgheart">
                     <i class="far fa-heart"></i>
                 </div>
@@ -94,7 +96,7 @@
             </div>
             <!-- Restaurant à la française -->
             <div class="card">
-                <span>Nouveau</span>
+                <span class="card__new--disable">Nouveau</span>
                 <div class="card__bgheart">
                     <i class="far fa-heart"></i>
                 </div>
@@ -112,7 +114,7 @@
             </div>
             <!-- Restaurant le délice des sens -->
             <div class="card">
-                <span>Nouveau</span>
+                <span class="card__new--disable">Nouveau</span>
                 <div class="card__bgheart">
                     <i class="far fa-heart"></i>
                 </div>

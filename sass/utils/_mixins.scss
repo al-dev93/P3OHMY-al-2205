@@ -24,21 +24,24 @@
  * largeur
  * padding
  */
-@mixin smart-btn($color1, $color2: null, $shadows: $shadow-btn, $lgn: 0) {
+@mixin smart-btn($color1, $color2, $shadows: $shadow-btn, $lgn: 0) {
     @each $event, $shw in $shadows {
         @if ($event == mute) {
             box-shadow: map-get($shw, shadow);
-            @if ($color2 != null) {
-                background: linear-gradient(to left top, $primary-color, $secondary-color);
-            } @else {
+            @if ($lgn == 0) {
                 background-color: $color1;
+            } @else {
+                background: linear-gradient(to left top, $primary-color, $secondary-color);
             } 
         }
         @else{
             &:#{$event} {
                 box-shadow: map-get($shw, shadow);
-                @if ($color2 !=null) {
-                    background: linear-gradient(to left top, lighten($primary-color, $lgn), lighten($secondary-color, $lgn));
+                @if ($lgn == 0) {
+                    background-color: $color2;
+                }
+                @else {
+                    background-color: linear-gradient(to left top, lighten($primary-color, $lgn), lighten($secondary-color, $lgn));
                 }
             }
         }

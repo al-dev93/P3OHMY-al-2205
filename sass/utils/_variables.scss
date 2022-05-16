@@ -15,9 +15,12 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 // couleur tertiaire menthe
 $tertiary-color: #99E2D0;
+$tertiary-color-text: #008766;
 // couleurs de fond des conteneurs
 $grey-color: #EAEAEA;
 $soft-grey-color: #F6F6F6;
+$middle-grey-color: #D6D6D6;
+$dark-grey-color: #353535;
 // couleur principale du texte
 $black-color: #000;
 // couleur de texte sur fond coloré
@@ -43,9 +46,9 @@ $shadow-btn:(
   )
 );
 
-//* Définition du background des boutons
+//* Changement du background des boutons au survol
 $bgbtn-nav-color: #F5EDFF; // background des boutons du menu
-$bgbtn-lighten: 5%;  // éclaircicement du background
+$bgbtn-lighten: 5%;  // éclaircicement du background des boutons à gradient
 
 
 //* largeur maximale de conteneur
