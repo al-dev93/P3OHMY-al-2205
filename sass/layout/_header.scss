@@ -3,22 +3,40 @@
 // -----------------------------------------------------------------------------
 .header{
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 21px 0 13px;
+    padding: 21px 0 14px;
     width: 100%;
-    min-height: 4.125rem;
-    @include tablet {
-        height: 100px;
+    // min-height: 4.125rem;
+    // @include tablet {
+    //     height: 100px;
+    // }
+    &--border-bottom{
+        border-bottom: 2px solid $middle-grey-color;
     }
-    border-bottom: 2px solid $middle-grey-color;
-    &__logo{
-        width: 44%;
-        @include tablet {
-            width: 28%
+    &__backward{
+        margin: 0 4rem 0 1.38rem;
+        & i{
+            font-size: 1.3rem;
+            font-weight: 900;
         }
-        @include desktop {
-            width: 18%;
+        &--disable{
+            display: none;
+        }
+    }
+    &__wrap{
+        // min-height: 4.125rem;
+        width: 72%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        &__logo{
+            width: 61.11%; //44%*100/72
+            @include tablet {
+                width: 38.89%  //28%*100/72
+            }
+            @include desktop {
+                width: 25%;  //18%*100/72
+            }
         }
     }
 }
