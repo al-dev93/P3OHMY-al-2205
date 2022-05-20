@@ -17,9 +17,9 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
     @include desktop{
         flex: 1;
-    }
     }
     &__title{
         width: 100%;

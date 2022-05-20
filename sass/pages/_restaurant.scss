@@ -3,5 +3,72 @@
 // -----------------------------------------------------------------------------
 
 .restaurant{
-
+    display: flex;
+    flex-direction: column;
+    background: $soft-grey-color;
+    border-radius: 40px 40px 0 0;
+    padding: 2.3rem 0.8rem 4rem 1.2rem;
+    &__name{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.9rem;
+        & h2{
+            margin: 0 2rem 0 0;
+            font-family: $title-font;
+            font-weight: 700;
+            font-style: oblique;
+            font-size: 1.7rem;
+        }
+        & i{
+            @extend %heart-icone !optional;
+        }
+    }
+    & .board{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        & .dish{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.3rem;
+            &__title{
+                width: 2.5rem;
+                border-bottom: 3px solid $tertiary-color;
+                padding-bottom: 5px;
+                margin-bottom: 0.9rem;
+                & h3{
+                    font-size: 1.24rem;
+                    font-variant: small-caps;
+                }
+            }
+            &__item{
+                width: 100%;
+                padding: 0.8rem 1.25rem 0.8rem 0.35rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                background-color: $white-color;
+                border-radius: 20px;
+                box-shadow: 0 5px 4px 0 $middle-grey-color;
+                margin-bottom: 0.85rem;
+                &__description{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 0.9rem;
+                    & b{
+                        font-size: 1.1rem;
+                        margin-bottom: 0.35rem;
+                    }
+                }
+                &__price{
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__btn{
+        width: 55%;
+        align-self: center;
+    }
 }

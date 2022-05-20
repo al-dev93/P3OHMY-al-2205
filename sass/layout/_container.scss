@@ -25,6 +25,9 @@
       margin-bottom: 5rem;
     }
   } 
+  &--max-height{
+    max-height: 13.7rem;
+  }
   @include desktop {
     width: 100%;
     flex-direction: row;

@@ -31,7 +31,7 @@
             @if ($lgn == 0) {
                 background-color: $color1;
             } @else {
-                background: linear-gradient(to left top, $primary-color, $secondary-color);
+                background: linear-gradient(to left top, $color1, $color2);
             } 
         }
         @else{
@@ -41,7 +41,7 @@
                     background-color: $color2;
                 }
                 @else {
-                    background-color: linear-gradient(to left top, lighten($primary-color, $lgn), lighten($secondary-color, $lgn));
+                    background: linear-gradient(to left top, lighten($color1, $lgn), lighten($color2, $lgn));
                 }
             }
         }
