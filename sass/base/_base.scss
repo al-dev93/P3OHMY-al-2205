@@ -16,14 +16,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
-/**
- * largeur maximale et centrage du body
- */
-body{
-  max-width: $max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 /**
  * style des liens
  */

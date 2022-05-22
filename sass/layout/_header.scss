@@ -1,40 +1,40 @@
 // -----------------------------------------------------------------------------
-// style du header.
+// style du header - le header de la page d'accueil dispose d'une bordure
+// inférieure et la flèche de retour arrière est désactivée.
 // -----------------------------------------------------------------------------
 .header{
     display: flex;
     align-items: center;
     padding: 21px 0 14px;
-    width: 100%;
-    // min-height: 4.125rem;
-    // @include tablet {
-    //     height: 100px;
-    // }
-    &--border-bottom{
+    /* active la bordure inférieure du header  /
+    /  sur la page d'accueil                  */
+    &--border{
         border-bottom: 2px solid $middle-grey-color;
     }
-    &__backward{
-        margin: 0 4rem 0 1.38rem;
-        & i{
-            font-size: 1.3rem;
-            font-weight: 900;
-        }
-        &--disable{
-            display: none;
-        }
-    }
-    &__wrap{
-        // min-height: 4.125rem;
+    & .header-content{
         width: 72%;
         display: flex;
         justify-content: end;
         align-items: center;
+        /* la flèche de retour arrière est désactivée sur  /
+        /  la page d'accueil grâce à la classe .disable    /
+        /  présente dans _base                            */
+        &__backward{
+            margin: 0 23.5% 0 1.38rem;
+            & i{
+                font-size: 1.3rem;
+                font-weight: 900;
+            }
+            &--disabled{
+                display: none;
+            }
+        }
         &__logo{
             width: 61.11%; //44%*100/72
-            @include tablet {
-                width: 38.89%  //28%*100/72
+            @include tablet{
+                width: 38.89%;  //28%*100/72
             }
-            @include desktop {
+            @include desktop{
                 width: 25%;  //18%*100/72
             }
         }

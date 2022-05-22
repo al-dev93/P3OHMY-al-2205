@@ -2,24 +2,26 @@
 @import './utils/variables';
 @import './utils/functions';
 @import './utils/mixins';
+@import './utils/extensions';
 
   //  2. import des styles de base
 @import './base/base';
 @import './base/typography';
 
 //  3. import des layouts
-@import './layout/header';
 @import './layout/container';
-@import './layout/head-page';
-@import './layout/main-nav';
-@import './layout/resto';
+@import './layout/header';
+@import './layout/nav';
+@import './layout/dish';
 @import './layout/footer';
 
 
 //  4. import des composants
 @import './components/button';
 @import './components/form';
+@import './components/heart';
 @import './components/card';
 
 //  5. import des styles de pages
+@import './pages/home';
 @import './pages/restaurant';

@@ -2,6 +2,63 @@
 // style de la page pour les restaurants
 // -----------------------------------------------------------------------------
 
-// .restaurant{
-
-// }
+.restaurant{
+    @extend %boxlayout;
+    & .around{
+        max-height: 13.7rem;
+        @include tablet{
+            max-height: 20rem;
+        }
+        @include desktop{
+            max-height: 100%;
+            margin-bottom: 0;
+        }
+        & img{
+            width: 100%;
+            height: max-content;
+            @include desktop{
+                width: 900px;
+                height: 100%;
+                object-position: -200px;
+            }
+        }
+    }
+    & .main{
+        background: $soft-grey-color;
+        border-radius: 40px 40px 0 0;
+        padding: 2.3rem 0.8rem 4rem 1.2rem;
+        @include desktop{
+            border-radius: 40px 0 0 40px;
+            padding: 2.3rem 2.5rem;
+        }
+        &__name{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.9rem;
+            & h2{
+                margin: 0 2rem 0 0;
+                font-family: $title-font;
+                font-weight: 700;
+                font-style: oblique;
+                font-size: 1.7rem;
+            }
+            // & i{
+            //     @extend %heart-icone !optional;
+            // }
+        }
+        &__board{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.6rem;
+            @include desktop{
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        &__btn{
+            width: 55%;
+            max-width: 11.2rem ;
+            align-self: center;
+        }
+    }
+}
