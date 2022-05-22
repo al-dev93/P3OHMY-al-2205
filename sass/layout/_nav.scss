@@ -6,7 +6,7 @@
  * largeur
  * padding
  */
-.main-nav {
+.nav {
     counter-reset: list_item;
     width: 100%;
     margin-bottom: 4.7rem;
@@ -21,13 +21,13 @@
         margin-right: 0;
         align-self: initial;
     }
-    h2 {
+    &__title{
         margin: 1.15rem 0 1.9rem;
         @include tablet {
             margin: 0 1rem;
         }
     }
-    & li {
+    &__item{
         counter-increment: list_item;
         margin-bottom: 1.47rem;
         height: 74px;
@@ -47,25 +47,25 @@
             background-color: $primary-color;
             content: counter(list_item);
         }
-    }
-    &__item{
-        height: 100%;
-        width: 92%;
-        position: absolute;
-        left: 12px;
-        padding-left: 1.9rem;
-        display: flex;
-        align-items: center;
-        border-radius: 30px;
-        @include smart-btn($soft-grey-color, $bgbtn-nav-color);
-        &:hover :nth-child(1){
-            color: $primary-color;
-        }
-        & i {
-            width: 20px;
-            text-align: center;
-            margin-right: 1.4rem;
-            font-size: 18px;
+        &__label{
+            height: 100%;
+            width: 92%;
+            position: absolute;
+            left: 12px;
+            padding-left: 1.9rem;
+            display: flex;
+            align-items: center;
+            border-radius: 30px;
+            @include smart-btn($soft-grey-color, $bgbtn-nav-color);
+            &:hover :nth-child(1){
+                color: $primary-color;
+            }
+            & i {
+                width: 20px;
+                text-align: center;
+                margin-right: 1.4rem;
+                font-size: 18px;
+            }
         }
     }
 }
