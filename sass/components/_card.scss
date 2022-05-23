@@ -12,6 +12,7 @@
     border-radius: 18px;
     background-color: $white-color;
     box-shadow: 5px 5px 7px #C9C9C9;
+    // placement de l'étiquette new sur la carte
     &__new{
         padding: 7px 11px;
         position: absolute;
@@ -22,15 +23,13 @@
         font-weight: 700;
         color: $tertiary-color-text;
     }
+    // placement du conteneur du coeur sur la carte
     &__bgheart{
         position: absolute;
         right: 23px;
         bottom: 30px;
         width: 25px;
         height: 25px;
-        // & i{
-        //     @extend %heart-icone;
-        // }
     }
     &__wrap{
         display: flex;

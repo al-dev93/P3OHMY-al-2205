@@ -8,7 +8,7 @@
     z-index: 1;
     &:hover{
         &::after{
-            opacity: 1;
+            transform: scale(1);
         }
     }
     &::after{
@@ -22,8 +22,9 @@
         background: linear-gradient(to left top, $primary-color, $secondary-color);
         background-clip: text;
         color: transparent;
-        opacity: 0;
+        transform-origin: bottom;
+        transform: scale(0);
         z-index: 2;
-        transition: opacity 1000ms ease-in-out;
+        transition: transform 1500ms cubic-bezier(.9,.04,.26,.74);
     }
 }
