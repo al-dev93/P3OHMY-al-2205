@@ -8,6 +8,7 @@
     z-index: 1;
     &:hover{
         &::after{
+            opacity: 1;
             transform: scale(1);
         }
     }
@@ -23,8 +24,9 @@
         background-clip: text;
         color: transparent;
         transform-origin: bottom;
+        opacity: 0;
         transform: scale(0);
         z-index: 2;
-        transition: transform 1500ms cubic-bezier(.9,.04,.26,.74);
+        transition: transform 2500ms cubic-bezier(.9,.04,.26,.74), opacity 2000ms linear;
     }
 }
