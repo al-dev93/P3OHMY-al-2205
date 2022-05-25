@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// style d'une ligne de mets
+// -----------------------------------------------------------------------------
+
+/**
+ * largeur
+ * padding
+ */
+.dish-item{
+    width: 100%;
+    padding: 0.8rem 1.25rem 0.8rem 0.35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 20px;
+    background-color: $white-color;
+    box-shadow: 0 5px 4px 0 $middle-grey-color;
+    margin-bottom: 0.85rem;
+    &__description{
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        & b{
+            font-size: 1.1rem;
+            margin-bottom: 0.35rem;
+        }
+    }
+    &__price{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}

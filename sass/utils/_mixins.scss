@@ -21,6 +21,22 @@
     }
 }
 /**
+ * mixin pour la création de classes utilisées
+ * par l'animation dish-anim
+ */
+@mixin create-class-anim($nd: $dish-starter $dish $dish-sweet){
+    $n: 0;
+    @for $i from 1 through 3 {
+        @for $j from 1 through nth($nd, $i) {
+            &--#{$i}#{$j} {
+                animation-delay: ( $n + $j ) * $delay-dish-anim;
+            }    
+        }
+        $n: $n + nth($nd, $i) + 2;
+    }
+}
+
+/**
  * largeur
  * padding
  */
