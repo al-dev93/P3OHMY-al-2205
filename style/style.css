@@ -12,6 +12,10 @@
  * breakpoint = 992px
  */
 /**
+ * mixin pour la création de classes utilisées
+ * par l'animation dish-anim
+ */
+/**
  * largeur
  * padding
  */
@@ -268,11 +272,11 @@ p {
   font-size: 18px;
 }
 
-.dish-group {
+.dish {
   width: 100%;
   margin-bottom: 1.2rem;
 }
-.dish-group__title {
+.dish__title {
   width: 2.5rem;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
@@ -280,48 +284,64 @@ p {
   font-size: 1.24rem;
   font-variant: small-caps;
 }
-.dish-group .dish {
+.dish__list {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
-  .dish-group .dish {
+  .dish__list {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
-.dish-group .dish__item {
-  width: 100%;
-  padding: 0.8rem 1.25rem 0.8rem 0.35rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 5px 4px 0 #D6D6D6;
-  margin-bottom: 0.85rem;
+.dish__list .dish-item {
+  animation: dish-anim backwards cubic-bezier(0.62, 0.24, 0.58, 0.73) 600ms;
 }
 @media screen and (min-width: 768px) {
-  .dish-group .dish__item {
+  .dish__list .dish-item {
     width: 48%;
   }
 }
-.dish-group .dish__item__description {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
+.dish__list .dish-item--11 {
+  animation-delay: 250ms;
 }
-.dish-group .dish__item__description b {
-  font-size: 1.1rem;
-  margin-bottom: 0.35rem;
+.dish__list .dish-item--12 {
+  animation-delay: 500ms;
 }
-.dish-group .dish__item__price {
-  font-size: 1rem;
-  font-weight: 600;
+.dish__list .dish-item--13 {
+  animation-delay: 750ms;
+}
+.dish__list .dish-item--21 {
+  animation-delay: 1500ms;
+}
+.dish__list .dish-item--22 {
+  animation-delay: 1750ms;
+}
+.dish__list .dish-item--23 {
+  animation-delay: 2000ms;
+}
+.dish__list .dish-item--31 {
+  animation-delay: 2750ms;
+}
+.dish__list .dish-item--32 {
+  animation-delay: 3000ms;
+}
+.dish__list .dish-item--33 {
+  animation-delay: 3250ms;
 }
 
+@keyframes dish-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .footer {
   padding: 1.5rem 1rem;
   background-color: #353535;
@@ -505,6 +525,35 @@ form input {
   margin-bottom: 1%;
 }
 
+/**
+ * largeur
+ * padding
+ */
+.dish-item {
+  width: 100%;
+  padding: 0.8rem 1.25rem 0.8rem 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 4px 0 #D6D6D6;
+  margin-bottom: 0.85rem;
+}
+.dish-item__description {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+.dish-item__description b {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+.dish-item__price {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .home .business {
   width: 100%;
   display: flex;
@@ -540,7 +589,7 @@ form input {
   font-size: 1.14rem;
   text-align: center;
 }
-.home .business__btn {
+.home .business button {
   width: 58%;
   max-width: 230px;
   margin-left: 0.45rem;
@@ -640,7 +689,7 @@ form input {
     flex-wrap: wrap;
   }
 }
-.restaurant .main__btn {
+.restaurant .main button {
   width: 55%;
   max-width: 11.2rem;
   align-self: center;

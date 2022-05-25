@@ -42,9 +42,6 @@
                 font-style: oblique;
                 font-size: 1.7rem;
             }
-            // & i{
-            //     @extend %heart-icone !optional;
-            // }
         }
         &__board{
             display: flex;
@@ -55,7 +52,7 @@
                 flex-wrap: wrap;
             }
         }
-        &__btn{
+        & button{
             width: 55%;
             max-width: 11.2rem ;
             align-self: center;
