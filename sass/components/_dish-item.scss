@@ -8,25 +8,69 @@
  */
 .dish-item{
     width: 100%;
-    padding: 0.8rem 1.25rem 0.8rem 0.35rem;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     border-radius: 20px;
     background-color: $white-color;
     box-shadow: 0 5px 4px 0 $middle-grey-color;
     margin-bottom: 0.85rem;
-    &__description{
+    // &:hover > .content{
+    //     width: 82%;
+    // }
+    & .content{
+        width: 100%;
+        padding: 0.8rem 1.25rem 0.8rem 0.35rem;
         display: flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-        & b{
-            font-size: 1.1rem;
-            margin-bottom: 0.35rem;
+        align-items: flex-end;
+        transition: width 800ms ease-in-out;
+        &__description{
+            flex: 1 77%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            flex-direction: column;
+            font-size: 0.9rem;
+            & b{
+                font-size: 1.1rem;
+                margin-bottom: 0.35rem;
+            }
+        }
+        &__price{
+            margin-left: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
         }
     }
-    &__price{
-        font-size: 1rem;
-        font-weight: 600;
+    &:hover{
+        & > .checked{
+            width: 18%;
+            &::after{
+                transform: translateX(-100%) scaleX(1) rotate(1turn);
+            }
+        } 
+        & > .content{
+            width: 82%;
+        }
+    }
+    & .checked{
+        height: 100%;
+        width: 0%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 0 20px 20px 0;
+        background-color: $tertiary-color;
+        transition: width 800ms ease-in-out;
+        &::after{
+            display: block;
+            font: var(--fa-font-regular);
+            content: "\f058";
+            color: $white-color;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 68px;
+            transform: translateX(100%) scaleX(0);
+            transition: transform 800ms ease-in-out 200ms, transform 500ms, transform 800ms ease-out 100ms;
+        }
     }
 }
