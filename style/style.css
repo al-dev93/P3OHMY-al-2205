@@ -698,12 +698,39 @@ form input {
   }
 }
 .restaurant .main {
+  display: flex;
+  flex-direction: column;
   background: #F6F6F6;
   border-radius: 40px 40px 0 0;
   padding: 2.3rem 0.8rem 4rem 1.2rem;
+  /* //! suspension de __board
+          &__board{
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 1.6rem;
+              @include desktop{
+                  flex-direction: row;
+                  flex-wrap: wrap;
+              }
+              ! __name descendu sous main__board
+              &__name{
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 1.9rem;
+                  & h1{
+                      margin: 0 2rem 0 0;
+                      font-family: $title-font;
+                      font-weight: 700;
+                      font-style: oblique;
+                      font-size: 1.7rem;
+                  }
+              }
+          }*/
 }
 @media screen and (min-width: 992px) {
   .restaurant .main {
+    flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 40px 0 0 40px;
     padding: 2.3rem 2.5rem;
   }
@@ -713,28 +740,21 @@ form input {
   align-items: center;
   margin-bottom: 1.9rem;
 }
-.restaurant .main__name h2 {
+.restaurant .main__name h1 {
   margin: 0 2rem 0 0;
   font-family: "Shrikhand", cursive;
   font-weight: 700;
   font-style: oblique;
   font-size: 1.7rem;
 }
-.restaurant .main__board {
+.restaurant .main__btn {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1.6rem;
+  justify-content: center;
 }
-@media screen and (min-width: 992px) {
-  .restaurant .main__board {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-.restaurant .main button {
+.restaurant .main__btn button {
   width: 55%;
   max-width: 11.2rem;
-  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,8 @@
 
 .restaurant{
     @extend %boxlayout;
+    //! ne serait correct que pour desktop- voir si réactivé
+    // margin-bottom: 1.6rem;
     & .around{
         max-height: 13.7rem;
         @include tablet{
@@ -24,10 +26,19 @@
         }
     }
     & .main{
+        //! ajout des propriétés venant de __board
+        display: flex;
+        flex-direction: column;
+        // margin-bottom: 1.6rem;
+        //! fin de l'ajout des propriétés de __board
         background: $soft-grey-color;
         border-radius: 40px 40px 0 0;
         padding: 2.3rem 0.8rem 4rem 1.2rem;
         @include desktop{
+            //! ajout des propriétés venant de __board
+            flex-direction: row;
+            flex-wrap: wrap;
+            //! fin de l'ajout des propriétés de __board
             border-radius: 40px 0 0 40px;
             padding: 2.3rem 2.5rem;
         }
@@ -35,7 +46,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 1.9rem;
-            & h2{
+            & h1{
                 margin: 0 2rem 0 0;
                 font-family: $title-font;
                 font-weight: 700;
@@ -43,6 +54,7 @@
                 font-size: 1.7rem;
             }
         }
+/* //! suspension de __board
         &__board{
             display: flex;
             flex-direction: column;
@@ -51,11 +63,29 @@
                 flex-direction: row;
                 flex-wrap: wrap;
             }
-        }
-        & button{
-            width: 55%;
-            max-width: 11.2rem ;
-            align-self: center;
+            ! __name descendu sous main__board
+            &__name{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.9rem;
+                & h1{
+                    margin: 0 2rem 0 0;
+                    font-family: $title-font;
+                    font-weight: 700;
+                    font-style: oblique;
+                    font-size: 1.7rem;
+                }
+            }
+        }*/
+        &__btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            & button{
+                width: 55%;
+                max-width: 11.2rem ;
+                // align-self: center;
+            }
         }
     }
 }
