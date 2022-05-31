@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// fichier regroupant l'ensemble des variables
+// fichier des variables
 // -----------------------------------------------------------------------------
 
 //* définition des polices de caratères
@@ -17,8 +17,8 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $tertiary-color-text: #008766;
 // couleurs de fond des conteneurs
-$grey-color: #EAEAEA;
 $soft-grey-color: #F6F6F6;
+$grey-color: #EAEAEA;
 $middle-grey-color: #D6D6D6;
 $dark-grey-color: #353535;
 // couleur principale du texte
@@ -35,16 +35,10 @@ $shw-btn-color: #C9C9C9;  // couleur
 // paramètre d'animation de l'ombre
 $shw-thickness: 3px;   // augmentation de l'épaisseur
 $shw-spread: 1px;      // renforcer l'étalement
-$shw-darken: 18%;  // assombrir l'ombre 
-// map contenant l'ombre initiale et l'ombre animée
-$shadow-btn:(
-  mute:(
-    shadow: 0 $shw-btn-thicken $shw-btn-blur $shw-btn-spread $shw-btn-color
-  ),
-  hover:(
-    shadow: 0 $shw-btn-thicken+$shw-thickness $shw-btn-blur $shw-btn-spread+$shw-spread darken($shw-btn-color, $shw-darken)
-  )
-);
+$shw-darken: 8%;  // assombrir l'ombre 
+// listes des ombres initiale et animée
+$mute-shadow: 0 $shw-btn-thicken $shw-btn-blur $shw-btn-spread $shw-btn-color;
+$hover-shadow: 0 $shw-btn-thicken+$shw-thickness $shw-btn-blur $shw-btn-spread+$shw-spread darken($shw-btn-color, $shw-darken); 
 
 //* Changement du background des boutons au survol
 $bgbtn-nav-color: #F5EDFF; // background des boutons du menu
@@ -54,11 +48,11 @@ $bgbtn-lighten: 5%;  // éclaircicement du background des boutons à gradient
 $dish-starter: 3;
 $dish: 3;
 $dish-sweet: 3;
-//* Animations
+//* Animations affichage progressif des lignes de menu
 $delay-dish-anim: 250ms;
 $lenght-dish-anim: 600ms; 
 
-//* largeur maximale de conteneur
+//* largeur maximale du corps central de la page
 $max-width: 1366px;
 
 //* défintion des breakpoints dans une map

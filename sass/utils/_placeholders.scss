@@ -1,8 +1,13 @@
 // -----------------------------------------------------------------------------
-// fichier contenant les extensions
+// fichier des extensions
 // -----------------------------------------------------------------------------
 
-%boxlayout{
+/**
+ *  définition de la structure de base des pages
+ *  un conteneur main-header, éléments périphériques à la page
+ *  et un conteneur main, corps central de la page
+ */
+%page{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,7 +15,7 @@
         flex-direction: row;
         align-items: stretch;
     }
-    & .around{
+    & .main-header{
         width: 100%;
         display: flex;
         flex-direction: column;

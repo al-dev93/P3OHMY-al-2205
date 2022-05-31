@@ -9,23 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/style.css">
     <title>ohmyfood | accueil</title>
 </head>
 <body>
+    <!-- chargement du loader -->
+    <div class="loader">
+        <div class="loader__spinner"></div>
+        <span class="loader__wait">Veuillez patienter</span>
+    </div>
+    <!-- header avec border bottom  sur la largeur complète du viewport-->
     <header class="header header--border">
+        <!-- largeur de la zone principale limitée à $max-width -->
         <div class="container">
             <div class="header-content">
-                <a class="header-content__backward--disabled" href="#"><i class="fas fa-arrow-left"></i></a>
+                <!-- désactivation de la flèche backward -->
+                <a class="header-content__backward--disable" href="#"><i class="fas fa-arrow-left"></i></a>
                 <img class="header-content__logo" src="./image/logo/ohmyfood.png" alt="logo de ohmyfood">
             </div>
         </div>
     </header>
+    <!-- largeur de la zone principale limitée à $max-width -->
     <div class="container">
         <main class="home">
-            <div class="around">
+            <div class="main-header">
+                <!-- informations entreprise -->
                 <section class="business">
                     <form method="post" action="processing.php">
                         <label class="fas fa-map-marker-alt" for="location"></label>
@@ -37,33 +47,41 @@
                     <p class="business__slogan">
                         Découvrez des restaurants d'exception, sélectionnés par nos soins.
                     </p>
-                    <button name="location" type="submit">Explorer nos restaurants</button>
+                    <button class="btn" name="location" type="submit">Explorer nos restaurants</button>
                 </section>
+                <!-- menu de navigation -->
                 <nav class="nav">
                     <h2 class="nav__title">Fonctionnement</h2>
                     <ul>
                         <li class="nav__item">
-                            <div class="nav__item__label">
-                                <i class="fas fa-mobile-android-alt"></i><a href="#">Choisissez un restaurant</a>
-                            </div>
+                            <a href="#">
+                                <div class="nav__item__label">
+                                    <i class="fas fa-mobile-android-alt"></i><span>Choisissez un restaurant</span>
+                                </div>
+                            </a>
                         </li>
                         <li class="nav__item">
-                            <div class="nav__item__label">
-                                <i class="fas fa-list-dots"></i><a href="#">Composez votre menu</a>
-                            </div>
+                            <a href="#">
+                                <div class="nav__item__label">
+                                    <i class="fas fa-list-dots"></i><span>Composez votre menu</span>
+                                </div>
+                            </a>
                         </li>
                         <li class="nav__item">
-                            <div class="nav__item__label">
-                                <i class="fas fa-store"></i><a href="#">Dégustez au restaurant</a>
-                            </div>
+                            <a href="#">
+                                <div class="nav__item__label">
+                                    <i class="fas fa-store"></i><span>Dégustez au restaurant</span>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <section class="main">
                 <h2 class="main__title">Restaurants</h2>
-                <!-- Restaurant la palette du goût -->
+                <!-- conteneur des cartes restaurant -->
                 <div class="main__cards">
+                    <!-- Restaurant la palette du goût -->
                     <div class="card">
                         <span class="card__new">Nouveau</span>
                         <div class="card__bgheart">
@@ -137,9 +155,12 @@
             </section>
         </main>
     </div>
+    <!-- footer sur la largeur complète du viewport-->
     <footer class="footer">
+        <!-- largeur du contenu limitée à $max-width -->
         <div class="container">
             <h2>ohmyfood</h2>
+            <!-- contenu du header traité comme un menu -->
             <nav>
                 <ul class="footer__menu">
                     <li class="footer__menu__item"><a href="#"><i class="fas fa-cutlery"></i>Proposer un restaurant</a></li>

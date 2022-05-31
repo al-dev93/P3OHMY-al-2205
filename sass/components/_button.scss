@@ -1,16 +1,37 @@
 // -----------------------------------------------------------------------------
-// styles des boutons.
+// propriétés des boutons.
 // -----------------------------------------------------------------------------
 
 /**
- * largeur
- * padding
+ * bouton avec un gradient en background
+ * 
  */
-button{
+.btn{
     line-height: 3rem;
     border: none;
     border-radius: 3rem;
     color: $white-color;
     font-weight: 600;
-    @include smart-btn($color1: $primary-color, $color2: $secondary-color, $lgn: $bgbtn-lighten);
+    box-shadow: $mute-shadow;
+    position: relative;
+    z-index: 1;
+    &:hover{
+        box-shadow: $hover-shadow;
+        &::after{
+            opacity: 0.85;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 3rem;
+        background: linear-gradient(to left top, $primary-color, $secondary-color);
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
 }

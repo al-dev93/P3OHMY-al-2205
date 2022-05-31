@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// propriétés du loader
+// -----------------------------------------------------------------------------
+
+.loader {
+    // insère un fond gris clair au dessus de la page
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: $soft-grey-color;
+    opacity: 0.95;
+    // état initial caché du fond
+    visibility: hidden;
+    animation: load linear 3500ms;
+    // insère le spinner dans le fond gris clair
+    &__spinner{
+        position: absolute;
+        // centrage du spinner
+        top: calc(20% - 60px);
+        left: calc(50% - 60px);
+        @include desktop{
+            top: calc(50% - 60px);
+            left: calc(50% - 60px);
+        }
+        width: 120px;
+        height: 120px;
+        border: 16px solid $soft-grey-color;
+        border-radius: 50%;
+        border-top: 16px solid $primary-color;
+        border-right: 16px solid $secondary-color;
+        border-bottom: 16px solid $tertiary-color;
+        animation: spin ease-in-out 3000ms 500ms;
+    }
+    &__wait{
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        top: calc(20% + 120px + 5px);
+        left: calc(50% - 100px);
+        width: 200px;
+    }
+}
+// animation d'apparition et disprition du fond gris clair
+@keyframes load {
+    0% { 
+        visibility: visible;
+        z-index: 100;
+    }
+    90% {
+        opacity: 0.95;
+    }
+    100% { 
+        opacity: 0;
+        z-index: 100;
+    }
+}
+// animation du spinner
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(3turn);
+    }
+}

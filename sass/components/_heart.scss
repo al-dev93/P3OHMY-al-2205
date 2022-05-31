@@ -1,17 +1,20 @@
-
-
+// -----------------------------------------------------------------------------
+// propriétés de l'icône coeur avec remplissage progressif
+// -----------------------------------------------------------------------------
 
 .heart{
     font-size: 25px;
     position: relative;
     cursor: pointer;
     z-index: 1;
+    // au survol apparition du coeur plein
     &:hover{
         &::after{
             opacity: 1;
             transform: scale(1);
         }
     }
+    // pseudo élément coeur plein sur fond gradient
     &::after{
         font: var(--fa-font-solid);
         content: "\f004";
@@ -27,6 +30,6 @@
         opacity: 0;
         transform: scale(0);
         z-index: 2;
-        transition: transform 2500ms cubic-bezier(.9,.04,.26,.74), opacity 2000ms linear;
+        transition: transform cubic-bezier(.9,.04,.26,.74) 2100ms, opacity linear 1800ms;
     }
 }

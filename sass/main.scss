@@ -1,28 +1,33 @@
 //  1. import des utilitaires 
-@import './utils/variables';
-@import './utils/functions';
-@import './utils/mixins';
-@import './utils/extensions';
+@import
+  './utils/variables',
+  './utils/mixins',
+  './utils/placeholders',
+  './utils/functions';
 
   //  2. import des styles de base
-@import './base/base';
-@import './base/typography';
+@import 
+  './base/base',
+  './base/typography';
 
 //  3. import des layouts
-@import './layout/container';
-@import './layout/header';
-@import './layout/nav';
-@import './layout/dish';
-@import './layout/footer';
-
+@import 
+  './layout/container',
+  './layout/dish',
+  './layout/footer',
+  './layout/header',
+  './layout/nav';
 
 //  4. import des composants
-@import './components/button';
-@import './components/form';
-@import './components/heart';
-@import './components/card';
-@import './components/dish-item';
+@import 
+  './components/button',
+  './components/card',
+  './components/dish-item',
+  './components/form',
+  './components/heart',
+  './components/loader';
 
 //  5. import des styles de pages
-@import './pages/home';
-@import './pages/restaurant';
+@import 
+  './pages/home',
+  './pages/restaurant';

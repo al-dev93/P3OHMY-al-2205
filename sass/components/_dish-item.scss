@@ -1,56 +1,54 @@
 // -----------------------------------------------------------------------------
-// style d'une ligne de mets
+// propriétés d'une ligne de menu
 // -----------------------------------------------------------------------------
 
-/**
- * largeur
- * padding
- */
 .dish-item{
     width: 100%;
     display: flex;
     border-radius: 20px;
     background-color: $white-color;
     box-shadow: 0 5px 4px 0 $middle-grey-color;
-    margin-bottom: 0.85rem;
-    // &:hover > .content{
-    //     width: 82%;
-    // }
+    margin-bottom: 0.9rem;
     & .content{
         width: 100%;
-        padding: 0.8rem 1.25rem 0.8rem 0.35rem;
+        min-width: 82%;
+        padding: 0.85rem 1.25rem 0rem 0.35rem;
         display: flex;
         align-items: flex-end;
         transition: width 800ms ease-in-out;
         &__description{
-            flex: 1 77%;
+            flex: 1;
+            height: 100%;
+            display: inline-block;
+            padding-right: 10px;
+            // permet de tronquer la ligne sans saut de ligne
+            // en insérant "..." pour indiquer la coupure 
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            display: flex;
-            flex-direction: column;
             font-size: 0.9rem;
+            line-height: 1.4rem;
             & b{
                 font-size: 1.1rem;
-                margin-bottom: 0.35rem;
             }
         }
         &__price{
-            margin-left: 1rem;
             font-size: 1rem;
             font-weight: 600;
+            margin-bottom: 0.6rem;
         }
     }
     &:hover{
         & > .checked{
-            width: 18%;
+            width: 21%;
             &::after{
+                font-size: 21px;
                 transform: translateX(-100%) scaleX(1) rotate(1turn);
+                @include desktop{
+                    transform: translateX(-135%) scaleX(1) rotate(1turn);
+                }
             }
         } 
-        & > .content{
-            width: 82%;
-        }
     }
     & .checked{
         height: 100%;
@@ -60,17 +58,18 @@
         align-items: center;
         border-radius: 0 20px 20px 0;
         background-color: $tertiary-color;
-        transition: width 800ms ease-in-out;
+        transition: width ease-in-out 800ms 100ms;
         &::after{
             display: block;
             font: var(--fa-font-regular);
             content: "\f058";
             color: $white-color;
             font-weight: 600;
-            font-size: 22px;
+            font-size: 21px;
             line-height: 68px;
-            transform: translateX(100%) scaleX(0);
-            transition: transform 800ms ease-in-out 200ms, transform 500ms, transform 800ms ease-out 100ms;
+            transform-origin: center;
+            transform: translateX(110%) scaleX(0) rotate(0);
+            transition: transform 800ms 100ms, transform 0ms -400ms, transform ease-in-out 800ms 100ms;
         }
     }
 }

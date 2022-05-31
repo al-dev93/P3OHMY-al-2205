@@ -1,7 +1,8 @@
 // -----------------------------------------------------------------------------
-// style du footer.
+// propriétés du footer.
 // -----------------------------------------------------------------------------
 .footer{
+    width: 100%;
     padding: 1.5rem 1rem;
     background-color: $dark-grey-color;
     color: $white-color;
@@ -19,6 +20,7 @@
             font-size: 1.8rem;
         }
     }
+    // contenu du footer traité comme un menu de navigation
     &__menu{
         margin: 0;
         @include desktop{

@@ -1,12 +1,12 @@
 // -----------------------------------------------------------------------------
-// style de la page pour les restaurants
+// priétés de la page des restaurants
 // -----------------------------------------------------------------------------
 
 .restaurant{
-    @extend %boxlayout;
-    //! ne serait correct que pour desktop- voir si réactivé
-    // margin-bottom: 1.6rem;
-    & .around{
+    // extension structure de base de la page
+    @extend %page;
+    // éléments périphériques du corps central de la page
+    & .main-header{
         max-height: 13.7rem;
         @include tablet{
             max-height: 20rem;
@@ -25,66 +25,39 @@
             }
         }
     }
+    // corps central de la page restaurant
     & .main{
-        //! ajout des propriétés venant de __board
-        display: flex;
-        flex-direction: column;
-        // margin-bottom: 1.6rem;
-        //! fin de l'ajout des propriétés de __board
         background: $soft-grey-color;
         border-radius: 40px 40px 0 0;
-        padding: 2.3rem 0.8rem 4rem 1.2rem;
+        padding: 2.2rem 0.8rem 3.6rem 1.2rem;
         @include desktop{
-            //! ajout des propriétés venant de __board
             flex-direction: row;
             flex-wrap: wrap;
-            //! fin de l'ajout des propriétés de __board
             border-radius: 40px 0 0 40px;
             padding: 2.3rem 2.5rem;
         }
         &__name{
             display: flex;
             align-items: center;
-            margin-bottom: 1.9rem;
+            margin-bottom: 1.95rem;
             & h1{
-                margin: 0 2rem 0 0;
+                margin: 0 2.2rem 0 0;
+                padding-top: 0.1rem;
                 font-family: $title-font;
                 font-weight: 700;
                 font-style: oblique;
-                font-size: 1.7rem;
+                font-size: 1.68rem;
             }
         }
-/* //! suspension de __board
-        &__board{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1.6rem;
-            @include desktop{
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            ! __name descendu sous main__board
-            &__name{
-                display: flex;
-                align-items: center;
-                margin-bottom: 1.9rem;
-                & h1{
-                    margin: 0 2rem 0 0;
-                    font-family: $title-font;
-                    font-weight: 700;
-                    font-style: oblique;
-                    font-size: 1.7rem;
-                }
-            }
-        }*/
+        // bouton commander
         &__btn{
+            margin-top: 1.7rem;
             width: 100%;
             display: flex;
             justify-content: center;
-            & button{
+            & .btn{
                 width: 55%;
                 max-width: 11.2rem ;
-                // align-self: center;
             }
         }
     }

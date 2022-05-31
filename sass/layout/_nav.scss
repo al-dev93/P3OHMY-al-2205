@@ -1,11 +1,7 @@
 // -----------------------------------------------------------------------------
-// style du conteneur de navigation
+// propriétés du conteneur de navigation sur l'accueil
 // -----------------------------------------------------------------------------
 
-/**
- * largeur
- * padding
- */
 .nav {
     counter-reset: list_item;
     width: 100%;
@@ -56,9 +52,14 @@
             display: flex;
             align-items: center;
             border-radius: 30px;
-            @include smart-btn($soft-grey-color, $bgbtn-nav-color);
-            &:hover :nth-child(1){
-                color: $primary-color;
+            background-color: $soft-grey-color;
+            box-shadow: $mute-shadow;
+            &:hover {
+                background-color: $bgbtn-nav-color;
+                box-shadow: $hover-shadow;
+                & > :nth-child(1){
+                    color: $primary-color;
+                }
             }
             & i {
                 width: 20px;

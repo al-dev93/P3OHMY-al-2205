@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// Définition du conteneur main
+// propriétés des menus et effet d'apparition à l'ouverture de la page
 // -----------------------------------------------------------------------------
 
 .dish{
@@ -8,8 +8,8 @@
     &__title{
         width: 2.5rem;
         border-bottom: 3px solid $tertiary-color;
-        padding-bottom: 5px;
-        margin-bottom: 0.9rem;
+        padding-bottom: 4px;
+        margin: 0 0 0.8rem 0;
         font-size: 1.24rem;
         font-variant: small-caps;
     }
@@ -31,7 +31,7 @@
         }
     }
 }
-
+// animation des lignes de menu à l'ouverture
 @keyframes dish-anim {
     0% {
         opacity: 0;

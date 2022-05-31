@@ -1,8 +1,9 @@
 // -----------------------------------------------------------------------------
-// style du header - le header de la page d'accueil dispose d'une bordure
-// inférieure et la flèche de retour arrière est désactivée.
+// propriétés du header - header de l'accueil avec une bordure
+// inférieure et flèche de retour arrière désactivée.
 // -----------------------------------------------------------------------------
 .header{
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 21px 0 14px;
@@ -16,26 +17,27 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* la flèche de retour arrière est désactivée sur  /
-        /  la page d'accueil grâce à la classe .disable    /
-        /  présente dans _base                            */
+        /* la flèche de retour arrière présente sur les
+        /  pages des restaurants */
         &__backward{
             margin: 0 23.5% 0 1.38rem;
             & i{
                 font-size: 1.3rem;
                 font-weight: 900;
             }
-            &--disabled{
+            /* désactivation du retour arrière pour la
+            /  page d'accueil */         
+            &--disable{
                 display: none;
             }
         }
         &__logo{
-            width: 61.11%; //44%*100/72
+            width: 61.11%;
             @include tablet{
-                width: 38.89%;  //28%*100/72
+                width: 38.89%;
             }
             @include desktop{
-                width: 25%;  //18%*100/72
+                width: 25%;
             }
         }
     }

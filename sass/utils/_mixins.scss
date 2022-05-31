@@ -1,9 +1,9 @@
 // -----------------------------------------------------------------------------
-// fichier contenant les mixins.
+// fichier des mixins.
 // -----------------------------------------------------------------------------
-//! développé sur iphone 11 pro ios 14.6
+
 /**
- * mixin pour l'affichage sur tablette
+ * affichage sur tablette
  * breakpoint = 768px
  */
  @mixin tablet {
@@ -12,7 +12,7 @@
     }
 } 
 /**
- * mixin pour l'affichage sur desktop
+ * affichage sur desktop
  * breakpoint = 992px
  */
 @mixin desktop {
@@ -21,8 +21,9 @@
     }
 }
 /**
- * mixin pour la création de classes utilisées
- * par l'animation dish-anim
+ *  création des classes pour
+ *  l'animation dish-anim
+ *  pramètres: nombre d'entées, nombre de plats, nombre de desserts
  */
 @mixin create-class-anim($nd: $dish-starter $dish $dish-sweet){
     $n: 0;
@@ -33,33 +34,5 @@
             }    
         }
         $n: $n + nth($nd, $i) + 2;
-    }
-}
-
-/**
- * largeur
- * padding
- */
-@mixin smart-btn($color1, $color2, $shadows: $shadow-btn, $lgn: 0) {
-    @each $event, $shw in $shadows {
-        @if ($event == mute) {
-            box-shadow: map-get($shw, shadow);
-            @if ($lgn == 0) {
-                background-color: $color1;
-            } @else {
-                background: linear-gradient(to left top, $color1, $color2);
-            } 
-        }
-        @else{
-            &:#{$event} {
-                box-shadow: map-get($shw, shadow);
-                @if ($lgn == 0) {
-                    background-color: $color2;
-                }
-                @else {
-                    background: linear-gradient(to left top, lighten($color1, $lgn), lighten($color2, $lgn));
-                }
-            }
-        }
     }
 }

@@ -1,9 +1,9 @@
 // -----------------------------------------------------------------------------
-// fichier des styles de base
+// propriétés de base
 // -----------------------------------------------------------------------------
 
 /**
- * mise en place de boc-sizing
+ * mise en place de box-sizing
  */
 html {
   box-sizing: border-box;
@@ -16,9 +16,15 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
 /**
- * style des liens
+ * Largeur plein écran
+ */
+body{
+  position: relative;
+  width: 100vw;
+}
+/**
+ * propriétés de base des types de textes
  */
 h3{
   margin: 0;
@@ -27,14 +33,11 @@ p{
   margin: 0;
 }
 /**
- * style des liens
+ * propriétés des listes
  */
 ul {
   padding: 0;
 }
-/**
- * style des liens
- */
 li {
   list-style: none;
   margin: 0;

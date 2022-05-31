@@ -1,9 +1,11 @@
 // -----------------------------------------------------------------------------
-// style de la page d'accueil.
+// propriétés de la page d'accueil.
 // -----------------------------------------------------------------------------
 
 .home{
-    @extend %boxlayout;
+    // extension structure de base de la page
+    @extend %page;
+    // propriété du conteneur informations entreprise
     & .business{
         width: 100%;
         display: flex;
@@ -34,13 +36,15 @@
             font-size: 1.14rem;
             text-align: center;
         }
-        & button{
+        // bouton explorer les restaurants
+        & .btn{
             width: 58%;
             max-width: 230px;
             margin-left: 0.45rem;
             align-self: center;
         }
     }
+    // corps central de l'accueil
     & .main{
         padding: 0 5.3%;
         margin-bottom: 3rem;

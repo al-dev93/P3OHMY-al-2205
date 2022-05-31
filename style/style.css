@@ -4,20 +4,22 @@
 /   width > 992px: desktop
 */
 /**
- * mixin pour l'affichage sur tablette
+ * affichage sur tablette
  * breakpoint = 768px
  */
 /**
- * mixin pour l'affichage sur desktop
+ * affichage sur desktop
  * breakpoint = 992px
  */
 /**
- * mixin pour la création de classes utilisées
- * par l'animation dish-anim
+ *  création des classes pour
+ *  l'animation dish-anim
+ *  pramètres: nombre d'entées, nombre de plats, nombre de desserts
  */
 /**
- * largeur
- * padding
+ *  définition de la structure de base des pages
+ *  un conteneur main-header, éléments périphériques à la page
+ *  et un conteneur main, corps central de la page
  */
 .restaurant, .home {
   width: 100%;
@@ -30,19 +32,19 @@
     align-items: stretch;
   }
 }
-.restaurant .around, .home .around {
+.restaurant .main-header, .home .main-header {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .restaurant .around, .home .around {
+  .restaurant .main-header, .home .main-header {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 992px) {
-  .restaurant .around, .home .around {
+  .restaurant .main-header, .home .main-header {
     width: 35%;
     max-width: 400px;
     max-height: 100%;
@@ -62,7 +64,7 @@
 }
 
 /**
- * mise en place de boc-sizing
+ * mise en place de box-sizing
  */
 html {
   box-sizing: border-box;
@@ -78,7 +80,15 @@ html {
 }
 
 /**
- * style des liens
+ * Largeur plein écran
+ */
+body {
+  position: relative;
+  width: 100vw;
+}
+
+/**
+ * propriétés de base des types de textes
  */
 h3 {
   margin: 0;
@@ -89,15 +99,12 @@ p {
 }
 
 /**
- * style des liens
+ * propriétés des listes
  */
 ul {
   padding: 0;
 }
 
-/**
- * style des liens
- */
 li {
   list-style: none;
   margin: 0;
@@ -112,9 +119,6 @@ a {
   text-decoration: none;
 }
 
-/**
- * typographie de base
- */
 body {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -141,135 +145,13 @@ p {
 }
 
 /**
- * largeur
- * padding
+ * largeur max du conteneur princpal
+ * $max-width
  */
 .container {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  padding: 21px 0 14px;
-  /* active la bordure inférieure du header  /
-  /  sur la page d'accueil                  */
-}
-.header--border {
-  border-bottom: 2px solid #D6D6D6;
-}
-.header .header-content {
-  width: 72%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /* la flèche de retour arrière est désactivée sur  /
-  /  la page d'accueil grâce à la classe .disable    /
-  /  présente dans _base                            */
-}
-.header .header-content__backward {
-  margin: 0 23.5% 0 1.38rem;
-}
-.header .header-content__backward i {
-  font-size: 1.3rem;
-  font-weight: 900;
-}
-.header .header-content__backward--disabled {
-  display: none;
-}
-.header .header-content__logo {
-  width: 61.11%;
-}
-@media screen and (min-width: 768px) {
-  .header .header-content__logo {
-    width: 38.89%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .header .header-content__logo {
-    width: 25%;
-  }
-}
-
-/**
- * largeur
- * padding
- */
-.nav {
-  counter-reset: list_item;
-  width: 100%;
-  margin-bottom: 4.7rem;
-  padding-left: 5.5%;
-}
-@media screen and (min-width: 768px) {
-  .nav {
-    width: 40%;
-    margin: 0 8% 0 0;
-    align-self: center;
-  }
-}
-@media screen and (min-width: 992px) {
-  .nav {
-    width: 100%;
-    margin-right: 0;
-    align-self: initial;
-  }
-}
-.nav__title {
-  margin: 1.15rem 0 1.9rem;
-}
-@media screen and (min-width: 768px) {
-  .nav__title {
-    margin: 0 1rem;
-  }
-}
-.nav__item {
-  counter-increment: list_item;
-  margin-bottom: 1.47rem;
-  height: 74px;
-  vertical-align: middle;
-  position: relative;
-}
-.nav__item::before {
-  z-index: 1;
-  width: 24px;
-  line-height: 24px;
-  display: inline-block;
-  position: absolute;
-  top: 26px;
-  text-align: center;
-  font-weight: 500;
-  color: #fff;
-  border-radius: 50%;
-  background-color: #9356DC;
-  content: counter(list_item);
-}
-.nav__item__label {
-  height: 100%;
-  width: 92%;
-  position: absolute;
-  left: 12px;
-  padding-left: 1.9rem;
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-  box-shadow: 0 5px 8px 0px #C9C9C9;
-  background-color: #F6F6F6;
-}
-.nav__item__label:hover {
-  box-shadow: 0 8px 8px 1px #9b9b9b;
-  background-color: #F5EDFF;
-}
-.nav__item__label:hover :nth-child(1) {
-  color: #9356DC;
-}
-.nav__item__label i {
-  width: 20px;
-  text-align: center;
-  margin-right: 1.4rem;
-  font-size: 18px;
 }
 
 .dish {
@@ -279,8 +161,8 @@ p {
 .dish__title {
   width: 2.5rem;
   border-bottom: 3px solid #99E2D0;
-  padding-bottom: 5px;
-  margin-bottom: 0.9rem;
+  padding-bottom: 4px;
+  margin: 0 0 0.8rem 0;
   font-size: 1.24rem;
   font-variant: small-caps;
 }
@@ -343,6 +225,7 @@ p {
   }
 }
 .footer {
+  width: 100%;
   padding: 1.5rem 1rem;
   background-color: #353535;
   color: #fff;
@@ -408,75 +291,160 @@ p {
   }
 }
 
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 21px 0 14px;
+  /* active la bordure inférieure du header  /
+  /  sur la page d'accueil                  */
+}
+.header--border {
+  border-bottom: 2px solid #D6D6D6;
+}
+.header .header-content {
+  width: 72%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* la flèche de retour arrière présente sur les
+  /  pages des restaurants */
+}
+.header .header-content__backward {
+  margin: 0 23.5% 0 1.38rem;
+  /* désactivation du retour arrière pour la
+  /  page d'accueil */
+}
+.header .header-content__backward i {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.header .header-content__backward--disable {
+  display: none;
+}
+.header .header-content__logo {
+  width: 61.11%;
+}
+@media screen and (min-width: 768px) {
+  .header .header-content__logo {
+    width: 38.89%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header .header-content__logo {
+    width: 25%;
+  }
+}
+
+.nav {
+  counter-reset: list_item;
+  width: 100%;
+  margin-bottom: 4.7rem;
+  padding-left: 5.5%;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 40%;
+    margin: 0 8% 0 0;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav {
+    width: 100%;
+    margin-right: 0;
+    align-self: initial;
+  }
+}
+.nav__title {
+  margin: 1.15rem 0 1.9rem;
+}
+@media screen and (min-width: 768px) {
+  .nav__title {
+    margin: 0 1rem;
+  }
+}
+.nav__item {
+  counter-increment: list_item;
+  margin-bottom: 1.47rem;
+  height: 74px;
+  vertical-align: middle;
+  position: relative;
+}
+.nav__item::before {
+  z-index: 1;
+  width: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #9356DC;
+  content: counter(list_item);
+}
+.nav__item__label {
+  height: 100%;
+  width: 92%;
+  position: absolute;
+  left: 12px;
+  padding-left: 1.9rem;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #F6F6F6;
+  box-shadow: 0 5px 8px 0px #C9C9C9;
+}
+.nav__item__label:hover {
+  background-color: #F5EDFF;
+  box-shadow: 0 8px 8px 1px #b5b5b5;
+}
+.nav__item__label:hover > :nth-child(1) {
+  color: #9356DC;
+}
+.nav__item__label i {
+  width: 20px;
+  text-align: center;
+  margin-right: 1.4rem;
+  font-size: 18px;
+}
+
 /**
- * largeur
- * padding
+ * bouton avec un gradient en background
+ * 
  */
-button {
+.btn {
   line-height: 3rem;
   border: none;
   border-radius: 3rem;
   color: #fff;
   font-weight: 600;
   box-shadow: 0 5px 8px 0px #C9C9C9;
-  background: linear-gradient(to left top, #9356DC, #FF79DA);
-}
-button:hover {
-  box-shadow: 0 8px 8px 1px #9b9b9b;
-  background: linear-gradient(to left top, #a16be0, #ff93e1);
-}
-
-/**
- * largeur
- * padding
- */
-form {
-  width: 100%;
-  padding: 0.84rem 0 0.84rem 6.5rem;
-  display: flex;
-  background-color: #EAEAEA;
-}
-form label {
-  margin-right: 0.9rem;
-}
-form input {
-  border: 0;
-  background-color: transparent;
-  font-weight: 600;
-}
-
-.heart {
-  font-size: 25px;
   position: relative;
-  cursor: pointer;
   z-index: 1;
 }
-.heart:hover::after {
-  opacity: 1;
-  transform: scale(1);
+.btn:hover {
+  box-shadow: 0 8px 8px 1px #b5b5b5;
 }
-.heart::after {
-  font: var(--fa-font-solid);
-  content: "\f004";
+.btn:hover::after {
+  opacity: 0.85;
+}
+.btn::after {
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  border-radius: 3rem;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
-  background-clip: text;
-  color: transparent;
-  transform-origin: bottom;
-  opacity: 0;
-  transform: scale(0);
-  z-index: 2;
-  transition: transform 2500ms cubic-bezier(0.9, 0.04, 0.26, 0.74), opacity 2000ms linear;
+  opacity: 1;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
-/**
- * largeur
- * padding
- */
 .card {
   width: 100%;
   position: relative;
@@ -528,51 +496,52 @@ form input {
   margin-bottom: 1%;
 }
 
-/**
- * largeur
- * padding
- */
 .dish-item {
   width: 100%;
   display: flex;
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 5px 4px 0 #D6D6D6;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.9rem;
 }
 .dish-item .content {
   width: 100%;
-  padding: 0.8rem 1.25rem 0.8rem 0.35rem;
+  min-width: 82%;
+  padding: 0.85rem 1.25rem 0rem 0.35rem;
   display: flex;
   align-items: flex-end;
   transition: width 800ms ease-in-out;
 }
 .dish-item .content__description {
-  flex: 1 77%;
+  flex: 1;
+  height: 100%;
+  display: inline-block;
+  padding-right: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: flex;
-  flex-direction: column;
   font-size: 0.9rem;
+  line-height: 1.4rem;
 }
 .dish-item .content__description b {
   font-size: 1.1rem;
-  margin-bottom: 0.35rem;
 }
 .dish-item .content__price {
-  margin-left: 1rem;
   font-size: 1rem;
   font-weight: 600;
+  margin-bottom: 0.6rem;
 }
 .dish-item:hover > .checked {
-  width: 18%;
+  width: 21%;
 }
 .dish-item:hover > .checked::after {
+  font-size: 21px;
   transform: translateX(-100%) scaleX(1) rotate(1turn);
 }
-.dish-item:hover > .content {
-  width: 82%;
+@media screen and (min-width: 992px) {
+  .dish-item:hover > .checked::after {
+    transform: translateX(-135%) scaleX(1) rotate(1turn);
+  }
 }
 .dish-item .checked {
   height: 100%;
@@ -582,7 +551,7 @@ form input {
   align-items: center;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
-  transition: width 800ms ease-in-out;
+  transition: width ease-in-out 800ms 100ms;
 }
 .dish-item .checked::after {
   display: block;
@@ -590,12 +559,117 @@ form input {
   content: "\f058";
   color: #fff;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 68px;
-  transform: translateX(100%) scaleX(0);
-  transition: transform 800ms ease-in-out 200ms, transform 500ms, transform 800ms ease-out 100ms;
+  transform-origin: center;
+  transform: translateX(110%) scaleX(0) rotate(0);
+  transition: transform 800ms 100ms, transform 0ms -400ms, transform ease-in-out 800ms 100ms;
 }
 
+form {
+  width: 100%;
+  padding: 0.84rem 0 0.84rem 6.5rem;
+  display: flex;
+  background-color: #EAEAEA;
+}
+form label {
+  margin-right: 0.9rem;
+}
+form input {
+  border: 0;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.heart {
+  font-size: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.heart:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.heart::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+  transform-origin: bottom;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+  transition: transform cubic-bezier(0.9, 0.04, 0.26, 0.74) 2100ms, opacity linear 1800ms;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  opacity: 0.95;
+  visibility: hidden;
+  animation: load linear 3500ms;
+}
+.loader__spinner {
+  position: absolute;
+  top: calc(20% - 60px);
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 120px;
+  border: 16px solid #F6F6F6;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #FF79DA;
+  border-bottom: 16px solid #99E2D0;
+  animation: spin ease-in-out 3000ms 500ms;
+}
+@media screen and (min-width: 992px) {
+  .loader__spinner {
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+  }
+}
+.loader__wait {
+  position: absolute;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  top: calc(20% + 120px + 5px);
+  left: calc(50% - 100px);
+  width: 200px;
+}
+
+@keyframes load {
+  0% {
+    visibility: visible;
+    z-index: 100;
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    z-index: 100;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3turn);
+  }
+}
 .home .business {
   width: 100%;
   display: flex;
@@ -631,7 +705,7 @@ form input {
   font-size: 1.14rem;
   text-align: center;
 }
-.home .business button {
+.home .business .btn {
   width: 58%;
   max-width: 230px;
   margin-left: 0.45rem;
@@ -672,60 +746,35 @@ form input {
   }
 }
 
-.restaurant .around {
+.restaurant .main-header {
   max-height: 13.7rem;
 }
 @media screen and (min-width: 768px) {
-  .restaurant .around {
+  .restaurant .main-header {
     max-height: 20rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .restaurant .around {
+  .restaurant .main-header {
     max-height: 100%;
     margin-bottom: 0;
   }
 }
-.restaurant .around img {
+.restaurant .main-header img {
   width: 100%;
   height: max-content;
 }
 @media screen and (min-width: 992px) {
-  .restaurant .around img {
+  .restaurant .main-header img {
     width: 900px;
     height: 100%;
     object-position: -200px;
   }
 }
 .restaurant .main {
-  display: flex;
-  flex-direction: column;
   background: #F6F6F6;
   border-radius: 40px 40px 0 0;
-  padding: 2.3rem 0.8rem 4rem 1.2rem;
-  /* //! suspension de __board
-          &__board{
-              display: flex;
-              flex-direction: column;
-              margin-bottom: 1.6rem;
-              @include desktop{
-                  flex-direction: row;
-                  flex-wrap: wrap;
-              }
-              ! __name descendu sous main__board
-              &__name{
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 1.9rem;
-                  & h1{
-                      margin: 0 2rem 0 0;
-                      font-family: $title-font;
-                      font-weight: 700;
-                      font-style: oblique;
-                      font-size: 1.7rem;
-                  }
-              }
-          }*/
+  padding: 2.2rem 0.8rem 3.6rem 1.2rem;
 }
 @media screen and (min-width: 992px) {
   .restaurant .main {
@@ -738,21 +787,23 @@ form input {
 .restaurant .main__name {
   display: flex;
   align-items: center;
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.95rem;
 }
 .restaurant .main__name h1 {
-  margin: 0 2rem 0 0;
+  margin: 0 2.2rem 0 0;
+  padding-top: 0.1rem;
   font-family: "Shrikhand", cursive;
   font-weight: 700;
   font-style: oblique;
-  font-size: 1.7rem;
+  font-size: 1.68rem;
 }
 .restaurant .main__btn {
+  margin-top: 1.7rem;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.restaurant .main__btn button {
+.restaurant .main__btn .btn {
   width: 55%;
   max-width: 11.2rem;
 }
