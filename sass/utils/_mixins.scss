@@ -33,6 +33,6 @@
                 animation-delay: ( $n + $j ) * $delay-dish-anim;
             }    
         }
-        $n: $n + nth($nd, $i) + 2;
+        $n: $n + nth($nd, $i) - 1;
     }
 }

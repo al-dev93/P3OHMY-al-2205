@@ -195,23 +195,26 @@ p {
 .dish__list .dish-item--13 {
   animation-delay: 750ms;
 }
+.dish__list .dish-item--14 {
+  animation-delay: 1000ms;
+}
 .dish__list .dish-item--21 {
-  animation-delay: 1500ms;
+  animation-delay: 1000ms;
 }
 .dish__list .dish-item--22 {
-  animation-delay: 1750ms;
+  animation-delay: 1250ms;
 }
 .dish__list .dish-item--23 {
-  animation-delay: 2000ms;
+  animation-delay: 1500ms;
 }
 .dish__list .dish-item--31 {
-  animation-delay: 2750ms;
+  animation-delay: 1500ms;
 }
 .dish__list .dish-item--32 {
-  animation-delay: 3000ms;
+  animation-delay: 1750ms;
 }
 .dish__list .dish-item--33 {
-  animation-delay: 3250ms;
+  animation-delay: 2000ms;
 }
 
 @keyframes dish-anim {
@@ -506,7 +509,7 @@ p {
 }
 .dish-item .content {
   width: 100%;
-  min-width: 82%;
+  min-width: 60%;
   padding: 0.85rem 1.25rem 0rem 0.35rem;
   display: flex;
   align-items: flex-end;
@@ -532,7 +535,12 @@ p {
   margin-bottom: 0.6rem;
 }
 .dish-item:hover > .checked {
-  width: 21%;
+  width: 73px;
+}
+@media screen and (min-width: 992px) {
+  .dish-item:hover > .checked {
+    width: 95px;
+  }
 }
 .dish-item:hover > .checked::after {
   font-size: 21px;
@@ -545,7 +553,7 @@ p {
 }
 .dish-item .checked {
   height: 100%;
-  width: 0%;
+  width: 0px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -622,7 +630,7 @@ form input {
 }
 .loader__spinner {
   position: absolute;
-  top: calc(20% - 60px);
+  top: 15%;
   left: calc(50% - 60px);
   width: 120px;
   height: 120px;
@@ -635,8 +643,7 @@ form input {
 }
 @media screen and (min-width: 992px) {
   .loader__spinner {
-    top: calc(50% - 60px);
-    left: calc(50% - 60px);
+    top: 30%;
   }
 }
 .loader__wait {
@@ -644,9 +651,14 @@ form input {
   display: block;
   text-align: center;
   font-weight: 700;
-  top: calc(20% + 120px + 5px);
+  top: calc(15% + 120px + 20px);
   left: calc(50% - 100px);
   width: 200px;
+}
+@media screen and (min-width: 992px) {
+  .loader__wait {
+    top: calc(30% + 120px + 20px);
+  }
 }
 
 @keyframes load {
@@ -756,7 +768,7 @@ form input {
 }
 @media screen and (min-width: 992px) {
   .restaurant .main-header {
-    max-height: 100%;
+    max-height: 900px;
     margin-bottom: 0;
   }
 }

@@ -11,7 +11,7 @@
     margin-bottom: 0.9rem;
     & .content{
         width: 100%;
-        min-width: 82%;
+        min-width: 60%;
         padding: 0.85rem 1.25rem 0rem 0.35rem;
         display: flex;
         align-items: flex-end;
@@ -40,7 +40,10 @@
     }
     &:hover{
         & > .checked{
-            width: 21%;
+            width: 73px;
+            @include desktop{
+                width: 95px;
+            }
             &::after{
                 font-size: 21px;
                 transform: translateX(-100%) scaleX(1) rotate(1turn);
@@ -52,7 +55,7 @@
     }
     & .checked{
         height: 100%;
-        width: 0%;
+        width: 0px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
