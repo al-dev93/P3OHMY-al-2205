@@ -16,11 +16,5 @@
   "bugs": {
     "url": "https://github.com/al-dev93/P3OHMY-al-2205/issues"
   },
-  "homepage": "https://github.com/al-dev93/P3OHMY-al-2205#readme",
-  "dependencies": {
-    "css-mqpacker": "^7.0.0"
-  },
-  "devDependencies": {
-    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1"
-  }
+  "homepage": "https://github.com/al-dev93/P3OHMY-al-2205#readme"
 }
