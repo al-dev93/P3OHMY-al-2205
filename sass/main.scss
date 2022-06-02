@@ -1,3 +1,5 @@
+@media screen and (min-width: 768px) {/* breakpoint 768px pour affichage tablette */}
+@media screen and (min-width: 992px){/* breakpoint 992px pour affichage desktop */}
 //  1. import des utilitaires 
 @import
   './utils/variables',

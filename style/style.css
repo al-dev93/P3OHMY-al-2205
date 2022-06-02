@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@media screen and (min-width: 768px) {
+  /* breakpoint 768px pour affichage tablette */
+}
+@media screen and (min-width: 992px) {
+  /* breakpoint 992px pour affichage desktop */
+}
 /*  width < 768px: smartphone
 /   992px < width > 768px: tablette
 /   width > 992px: desktop
@@ -513,7 +519,6 @@ p {
   padding: 0.85rem 1.25rem 0rem 0.35rem;
   display: flex;
   align-items: flex-end;
-  transition: width 800ms ease-in-out;
 }
 .dish-item .content__description {
   flex: 1;
